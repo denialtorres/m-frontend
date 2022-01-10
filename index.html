@@ -88,8 +88,8 @@
 				if (timeTaken < highScore) {
                     highScore = timeTaken;
                     document.getElementById("bestScore").innerHTML = highScore + "s";
-                    // setHsUrl = "http://localhost:8081/seths/" + timeTaken;
-                    setHsUrl = "/seths/" + timeTaken;
+                    setHsUrl = "http://localhost:8081/seths/" + timeTaken;
+
                     $.ajax({
                         url: setHsUrl,
                         dataType: "jsonp",
@@ -99,8 +99,8 @@
                         }
                     })
 				}
-                // setScore = "http://localhost:8081/setscore/" + timeTaken;
-                setScore = "/setscore/" + timeTaken;
+                setScore = "http://localhost:8081/setscore/" + timeTaken;
+
                 $.ajax({
                     url: setScore,
                     dataType: "jsonp",
